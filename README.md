@@ -1,6 +1,6 @@
-= \Glyptic Gems - Cucumber Gem Generation
+#Glyptic Gems - Cucumber Gem Generation
 
-== Description
+## Description
 
 Glyptic Gems is meant to be used in conjunction with cucumber to help generate gifs of test runs which can be embeded into reports
 
@@ -10,7 +10,7 @@ Curretly watir-webdriver and appium are the only supported drivers.
 
 Backgrounds and scenario outlines are not fully supported
 
-== Creating Gifs
+## Creating Gifs
  
 In your cucumber hooks file add the following
   AfterStep do |scenario|
@@ -22,7 +22,7 @@ In your cucumber hooks file add the following
   end
 
 
-== Embdeding in Cucumber Reports
+## Embdeding in Cucumber Reports
 test
  AfterStep do |scenario|
    GlypticGifs.new.take_gif_frame(your_driver, :driver_type_symbol, png_collection_folder)\n
@@ -40,7 +40,7 @@ test
       puts "See gif for success ::" + gif_location+'<br><a href="'+gif_location+'"><img width="200" src="'+gif_location+'"/></a>'
   end
  end
-== Warranty
+## Warranty
 
 This software is provided "as is" and without any express or implied
 warranties, including, without limitation, the implied warranties of
