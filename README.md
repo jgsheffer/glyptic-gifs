@@ -13,6 +13,7 @@ Backgrounds and scenario outlines are not fully supported
 ## Creating Gifs
  
 In your cucumber hooks file add the following
+```ruby
   AfterStep do |scenario|
     GlypticGifs.new.take_gif_frame(your_driver, :driver_type_symbol, png_collection_folder)\n
   end
@@ -20,14 +21,15 @@ In your cucumber hooks file add the following
   After do |scenario|
     GlypticGifs.new.create_gif(scenario, gif_location, png_location , @driver_holder.d, :appium)
   end
-
+```
 
 ## Embdeding in Cucumber Reports
-test
+```ruby
  AfterStep do |scenario|
    GlypticGifs.new.take_gif_frame(your_driver, :driver_type_symbol, png_collection_folder)\n
  end
-
+```
+```ruby
  After do |scenario|
   timestamp = Time.now.to_s.gsub(/:/, '-')
   gif_location = Dir.pwd+"/"+ENV['FT_TARGET']+"/test-reports/screenshots/"+timestamp+'.gif'
@@ -40,6 +42,7 @@ test
       puts "See gif for success ::" + gif_location+'<br><a href="'+gif_location+'"><img width="200" src="'+gif_location+'"/></a>'
   end
  end
+ ```
 ## Warranty
 
 This software is provided "as is" and without any express or implied
