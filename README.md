@@ -10,6 +10,15 @@ Curretly watir-webdriver and appium are the only supported drivers.
 
 Backgrounds and scenario outlines are not fully supported
 
+## Setup
+
+Glyptic gifs requires rmagick which requires native imagemagic libraries.
+Instructions to set this up on windows can be found at:
+
+http://www.redmine.org/projects/redmine/wiki/HowTo_install_rmagick_gem_on_Windows
+
+* Note: Be sure image magic is in your path.  If you continue to have issues installing rmagick then put the imagemagick folder in your ruby bin directory.
+
 ## Creating Gifs
  
 In your cucumber hooks file add the following
